@@ -18,7 +18,7 @@ menuListRef.insertAdjacentHTML('beforeend', markup);
 themeSwitchToggle.addEventListener('change', e => {
   if (e.target.checked) {
     localStorage.setItem('Theme', Theme.DARK);
-    body.classList.add(Theme.DARK);
+    // body.classList.add(Theme.DARK);
     body.classList.replace(Theme.LIGHT, Theme.DARK);
   } else {
     localStorage.setItem('Theme', Theme.LIGHT);
@@ -31,10 +31,10 @@ const currentTheme = localStorage.getItem('Theme');
 if (currentTheme === Theme.DARK) {
   themeSwitchToggle.checked = true;
   body.classList.add(Theme.DARK);
-  body.classList.replace(Theme.LIGHT, Theme.DARK);
+  // body.classList.replace(Theme.LIGHT, Theme.DARK);
 } else {
   themeSwitchToggle.checked = false;
-  body.classList.replace(Theme.DARK, Theme.LIGHT);
+  body.classList.add(Theme.LIGHT);
 }
 
 const btnClear = document.querySelector('.btn-clear');
